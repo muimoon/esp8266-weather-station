@@ -45,26 +45,33 @@ See more at https://thingpulse.com
 
 /***************************
  * Begin Settings
- **************************/
+ **************************////.'  
 
 // WIFI
 const char* WIFI_SSID = "ChinaNet-hcr7";
 const char* WIFI_PWD = "nkdaspqr";
 
-#define TZ              2       // (utc+) TZ in hours
-#define DST_MN          60      // use 60mn for summer time in some countries
+#define TZ              7       // (utc+) TZ in hours
+#define DST_MN          60      // use 60mn for summer time in so;/;me countries
 
 // Setup
 const int UPDATE_INTERVAL_SECS = 20 * 60; // Update every 20 minutes
 
 // Display Settings
 const int I2C_DISPLAY_ADDRESS = 0x3c;
-#if defined(ESP8266)
-const int SDA_PIN = D3;
-const int SDC_PIN = D4;
+//#if defined(ESP8266)//Node MCU
+//const int SDA_PIN = D5;
+//const int SDC_PIN = D6;
+//#else
+//const int SDA_PIN = 5; 
+//const int SDC_PIN = 6; 
+//#endif
+#if defined(ESP8266)//esp8266
+const int SDA_PIN = 2;
+const int SDC_PIN = 0;
 #else
-const int SDA_PIN = 5; //D3;
-const int SDC_PIN = 4; //D4;
+const int SDA_PIN = 2; 
+const int SDC_PIN = 0; 
 #endif
 
 
